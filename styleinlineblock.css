@@ -1,0 +1,106 @@
+/* Estilos W3Schools */
+.w3-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 16px;
+  }
+  
+  .w3-row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .w3-third {
+    float: left;
+    width: 33.33%;
+    padding: 8px;
+  }
+  
+  .w3-navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+  
+  .w3-navbar li {
+    float: left;
+  }
+  
+  .w3-navbar li a {
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Estilos adicionales */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    color: #007acc;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    color: #4CAF50;
+    margin-top: 30px;
+  }
+  
+  p {
+    color: #333;
+  }
+  
+  .w3-third p {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .w3-navbar li a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Ejemplos específicos */
+  .example-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  .example-box code {
+    display: block;
+    background-color: #e8e8e8;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  .inline-block-example {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid blue;
+    background-color: yellow;
+  }
+  
+  .inline-block-container {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  

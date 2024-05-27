@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators, Pseudo-classes y Pseudo-elements</title>
+    <link rel="stylesheet" href="styleothers.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Combinators, Pseudo-classes y Pseudo-elements</h1>
+        <div class="content-box">
+            <h2>Combinadores CSS</h2>
+            <p>Un combinador es algo que explica la relación entre los selectores.</p>
+            <p>Un selector CSS puede contener más de un selector simple. Entre los selectores simples, podemos incluir un combinador.</p>
+            <p>Hay cuatro combinadores diferentes en CSS:</p>
+            <ul>
+                <li>Selector descendiente (espacio)</li>
+                <li>Selector hijo (&gt;)</li>
+                <li>Selector de hermano adyacente (+)</li>
+                <li>Selector de hermano general (~)</li>
+            </ul>
+
+            <h3>Selector descendiente</h3>
+            <p>El selector descendiente selecciona todos los elementos que son descendientes de un elemento especificado.</p>
+            <div class="example-container">
+                <h4>Ejemplo</h4>
+                <p>El siguiente ejemplo selecciona todos los elementos &lt;p&gt; dentro de los elementos &lt;div&gt;:</p>
+                <pre><code>div p {
+  background-color: yellow;
+}</code></pre>
+            </div>
+
+            <h3>Selector hijo (&gt;)</h3>
+            <p>El selector hijo selecciona todos los elementos que son hijos de un elemento especificado.</p>
+            <div class="example-container">
+                <h4>Ejemplo</h4>
+                <p>El siguiente ejemplo selecciona todos los elementos &lt;p&gt; que son hijos de un elemento &lt;div&gt;:</p>
+                <pre><code>div > p {
+  background-color: yellow;
+}</code></pre>
+            </div>
+
+            <h3>Selector de hermano adyacente (+)</h3>
+            <p>El selector de hermano adyacente se utiliza para seleccionar un elemento que está directamente después de otro elemento específico.</p>
+            <div class="example-container">
+                <h4>Ejemplo</h4>
+                <p>El siguiente ejemplo selecciona el primer elemento &lt;p&gt; que está inmediatamente después de los elementos &lt;div&gt;:</p>
+                <pre><code>div + p {
+  background-color: yellow;
+}</code></pre>
+            </div>
+
+            <h3>Selector de hermano general (~)</h3>
+            <p>El selector de hermano general selecciona todos los elementos que son hermanos siguientes de un elemento especificado.</p>
+            <div class="example-container">
+                <h4>Ejemplo</h4>
+                <p>El siguiente ejemplo selecciona todos los elementos &lt;p&gt; que son hermanos siguientes de los elementos &lt;div&gt;:</p>
+                <pre><code>div ~ p {
+  background-color: yellow;
+}</code></pre>
+            </div>
+
+            <h3>Todos los selectores combinadores de CSS</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Ejemplo</th>
+                        <th>Descripción del ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>element element</td>
+                        <td>div p</td>
+                        <td>Selecciona todos los elementos &lt;p&gt; dentro de los elementos &lt;div&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>element&gt;element</td>
+                        <td>div &gt; p</td>
+                        <td>Selecciona todos los elementos &lt;p&gt; donde el padre es un elemento &lt;div&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>element+element</td>
+                        <td>div + p</td>
+                        <td>Selecciona el primer elemento &lt;p&gt; que está inmediatamente después de los elementos &lt;div&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>element1~element2</td>
+                        <td>p ~ ul</td>
+                        <td>Selecciona todos los elementos &lt;ul&gt; que son precedidos por un elemento &lt;p&gt;</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Pseudo-classes CSS</h2>
+            <p>¿Qué son las pseudo-clases?</p>
+            <p>Una pseudo-clase se utiliza para definir un estado especial de un elemento.</p>
+            <p>Por ejemplo, se puede usar para:</p>
+            <ul>
+                <li>Estilizar un elemento cuando un usuario pasa el ratón sobre él</li>
+                <li>Estilizar los enlaces visitados y no visitados de manera diferente</li>
+                <li>Estilizar un elemento cuando recibe el foco</li>
+            </ul>
+            <div class="example-container">
+                <h4>Mouse Over Me</h4>
+                <p>Click Me To Get Focus</p>
+            </div>
+
+            <h3>Sintaxis</h3>
+            <p>La sintaxis de las pseudo-clases:</p>
+            <pre><code>selector:pseudo-class {
+  property: value;
+}</code></pre>
+
+            <h3>Pseudo-clases de anclaje</h3>
+            <p>Los enlaces pueden mostrarse de diferentes maneras:</p>
+            <div class="example-container">
+                <h4>Ejemplo</h4>
+                <pre><code>/* enlace no visitado */
+a:link {
+  color: #FF0000;
+}
+
+/* enlace visitado */
+a:visited {
+  color: #00FF00;
+}
+
+/* enlace al pasar el ratón */
+a:hover {
+  color: #FF00FF;
+}
+
+/* enlace seleccionado */
+a:active {
+  color: #0000FF;
+}</code></pre>
+            </div>
+            <p>Nota: a:hover DEBE venir después de a:link y a:visited en la definición CSS para ser efectivo. a:active DEBE venir después de a:hover en la definición CSS para ser efectivo. ¡Los nombres de las pseudo-clases no son sensibles a mayúsculas y minúsculas!</p>
+
+            <h3>Pseudo-clases y clases HTML</h3>
+            <p>Las pseudo-clases se pueden combinar con las clases HTML:</p>
+            <div class="example-container">
+                <h4>Ejemplo</h4>
+                <pre><code>a.highlight:hover {
+  color: #ff0000;
+}</code></pre>
+            </div>
+            <p>Cuando pasas el ratón sobre el enlace en el ejemplo, cambiará de color.</p>
+
+            <h3>Hover en &lt;div&gt;</h3>
+            <p>Un ejemplo de uso de la pseudo-clase :hover en un elemento &lt;div&gt;:</p>
+            <div class="example-container">
+                <h4>Ejemplo</h4>
+                <pre><code>div:hover {
+  background-color: blue;
+}</code></pre>
+            </div>
+
+            <h3>Tooltip simple al pasar el ratón</h3>
+            <p>Pasa el ratón sobre un elemento &lt;div&gt; para mostrar un elemento &lt;p&gt; (como un tooltip):</p>
+            <div class="example-container">
+                <h4>Hover over me to show the &lt;p&gt; element.</h4>
+                <pre><code>p {
+  display: none;
+  background-color: yellow;
+  padding: 20px;
+}
+
+div:hover p {
+  display: block;
+}</code></pre>
+            </div>
+
+            <h3>CSS - La pseudo-clase :first-child</h3>
+            <p>La pseudo-clase :first-child coincide con un elemento especificado que es el primer hijo de otro elemento.</p>
+            <h4>Coincidir con el primer elemento &lt;p&gt;</h4>
+            <p>En el siguiente ejemplo, el selector coincide con cualquier elemento &lt;p&gt; que es el primer hijo de cualquier elemento:</p>
+            <div class="example-container">
+                <pre><code>p:first-child {
+  color: blue;
+}</code></pre>
+            </div>
+            <h4>Coincidir con el primer elemento &lt;i&gt; en todos los elementos &lt;p&gt;</h4>
+            <p>En el siguiente ejemplo, el selector coincide con el primer elemento &lt;i&gt; en todos los elementos &lt;p&gt;:</p>
+            <div class="example-container">
+                <pre><code>p i:first-child {
+  color: blue;
+}</code></pre>
+            </div>
+            <h4>Coincidir con todos los elementos &lt;i&gt; en todos los primeros elementos hijos &lt;p&gt;</h4>
+            <p>En el siguiente ejemplo, el selector coincide con todos los elementos &lt;i&gt; en los elementos &lt;p&gt; que son el primer hijo de otro elemento:</p>
+            <div class="example-container">
+                <pre><code>p:first-child i {
+  color: blue;
+}</code></pre>
+            </div>
+
+            <h3>CSS - La pseudo-clase :lang</h3>
+            <p>La pseudo-clase :lang permite definir reglas especiales para diferentes idiomas.</p>
+            <p>En el ejemplo a continuación, :lang define las comillas para los elementos &lt;q&gt; con lang="no":</p>
+            <div class="example-container">
+                <pre><code>q:lang(no) {
+  quotes: "~" "~";
+}</code></pre>
+            </div>
+
+            <h3>Todas las pseudo-clases de CSS</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Ejemplo</th>
+                        <th>Descripción del ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>:active</td>
+                        <td>a:active</td>
+                        <td>Selecciona el enlace activo</td>
+                    </tr>
+                    <tr>
+                        <td>:checked</td>
+                        <td>input:checked</td>
+                        <td>Selecciona todos los elementos &lt;input&gt; seleccionados</td>
+                    </tr>
+                    <tr>
+                        <td>:disabled</td>
+                        <td>input:disabled</td>
+                        <td>Selecciona todos los elementos &lt;input&gt; deshabilitados</td>
+                    </tr>
+                    <tr>
+                        <td>:empty</td>
+                        <td>p:empty</td>
+                        <td>Selecciona todos los elementos &lt;p&gt; que no tienen hijos</td>
+                    </tr>
+                    <tr>
+                        <td>:enabled</td>
+                        <td>input:enabled</td>
+                        <td>Selecciona todos los elementos &lt;input&gt; habilitados</td>
+                    </tr>
+                    <tr>
+                        <td>:first-child</td>
+                        <td>p:first-child</td>
+                        <td>Selecciona todos los elementos &lt;p&gt; que son el primer hijo de su padre</td>
+                    </tr>
+                    <tr>
+                        <td>:first-of-type</td>
+                        <td>p:first-of-type</td>
+                        <td>Selecciona todos los elementos &lt;p&gt; que son el primer &lt;p&gt; de su padre</td>
+                    </tr>
+                    <tr>
+                        <td>:focus</td>
+                        <td>input:focus</td>
+                        <td>Selecciona el elemento &lt;input&gt; que tiene el foco</td>
+                    </tr>
+                    <tr>
+                        <td>:hover</td>
+                        <td>a:hover</td>
+                        <td>Selecciona los enlaces cuando el ratón está sobre ellos</td>
+                    </tr>
+                    <tr>
+                        <td>:in-range</td>
+                        <td>input:in-range</td>
+                        <td>Selecciona elementos &lt;input&gt; con un valor dentro de un rango especificado</td>
+                    </tr>
+                    <tr>
+                        <td>:invalid</td>
+                        <td>input:invalid</td>
+                        <td>Selecciona todos los elementos &lt;input&gt; con un valor no válido</td>
+                    </tr>
+                    <tr>
+                        <td>:lang(language)</td>
+                        <td>p:lang(it)</td>
+                        <td>Selecciona todos los elementos &lt;p&gt; con un atributo lang que empieza con "it"</td>
+                    </tr>
+                    <tr>
+                        <td>:last-child</td>
+                        <td>p:last-child</td>
+                        <td>Selecciona todos los elementos &lt;p&gt; que son el último hijo de su padre</td>
+                    </tr>
+                    <tr>
+                        <td>:last-of-type</td>
+                        <td>p:last-of-type</td>
+                        <td>Selecciona todos los elementos &lt;p&gt; que son el último &lt;p&gt; de su padre</td>
+                    </tr>
+                    <tr>
+                        <td>:link</td>
+                        <td>a:link</td>
+                        <td>Selecciona todos los enlaces no visitados</td>
+                    </tr>
+                    <tr>
+                        <td>:not(selector)</td>
+                        <td>:not(p)</td>
+                        <td>Selecciona todos los elementos que no son un &lt;p&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>:nth-child(n)</td>
+                        <td>p:nth-child(2)</td>
+                        <td>Selecciona todos los elementos &lt;p&gt; que son el segundo hijo de su padre</td>
+                    </tr>
+                    <tr>
+                        <td>:nth-last-child(n)</td>
+                        <td>p:nth-last-child(2)</td>
+                        <td>Selecciona todos los elementos &lt;p&gt; que son el segundo hijo de su padre, contando desde el último hijo</td>
+                    </tr>
+                    <tr>
+                        <td>:nth-last-of-type(n)</td>
+                        <td>p:nth-last-of-type(2)</td>
+                        <td>Selecciona todos los elementos &lt;p&gt; que son el segundo &lt;p&gt; de su padre, contando desde el último hijo</td>
+                    </tr>
+                    <tr>
+                        <td>:nth-of-type(n)</td>
+                        <td>p:nth-of-type(2)</td>
+                        <td>Selecciona todos los elementos &lt;p&gt; que son el segundo &lt;p&gt; de su padre</td>
+                    </tr>
+                    <tr>
+                        <td>:only-of-type</td>
+                        <td>p:only-of-type</td>
+                        <td>Selecciona todos los elementos &lt;p&gt; que son el único &lt;p&gt; de su padre</td>
+                    </tr>
+                    <tr>
+                        <td>:only-child</td>
+                        <td>p:only-child</td>
+                        <td>Selecciona todos los elementos &lt;p&gt; que son el único hijo de su padre</td>
+                    </tr>
+                    <tr>
+                        <td>:optional</td>
+                        <td>input:optional</td>
+                        <td>Selecciona elementos &lt;input&gt; sin el atributo "required"</td>
+                    </tr>
+                    <tr>
+                        <td>:out-of-range</td>
+                        <td>input:out-of-range</td>
+                        <td>Selecciona elementos &lt;input&gt; con un valor fuera de un rango especificado</td>
+                    </tr>
+                    <tr>
+                        <td>:read-only</td>
+                        <td>input:read-only</td>
+                        <td>Selecciona elementos &lt;input&gt; con el atributo "readonly"</td>
+                    </tr>
+                    <tr>
+                        <td>:read-write</td>
+                        <td>input:read-write</td>
+                        <td>Selecciona elementos &lt;input&gt; sin el atributo "readonly"</td>
+                    </tr>
+                    <tr>
+                        <td>:required</td>
+                        <td>input:required</td>
+                        <td>Selecciona elementos &lt;input&gt; con el atributo "required"</td>
+                    </tr>
+                    <tr>
+                        <td>:root</td>
+                        <td>:root</td>
+                        <td>Selecciona el elemento raíz del documento</td>
+                    </tr>
+                    <tr>
+                        <td>:target</td>
+                        <td>#news:target</td>
+                        <td>Selecciona el elemento #news activo actual (clic en una URL que contiene ese nombre de ancla)</td>
+                    </tr>
+                    <tr>
+                        <td>:valid</td>
+                        <td>input:valid</td>
+                        <td>Selecciona todos los elementos &lt;input&gt; con un valor válido</td>
+                    </tr>
+                    <tr>
+                        <td>:visited</td>
+                        <td>a:visited</td>
+                        <td>Selecciona todos los enlaces visitados</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <div class="example-container">
+        <h2>¿Qué son los Pseudo-Elementos?</h2>
+        <p>Un pseudo-elemento CSS se utiliza para dar estilo a partes específicas de un elemento.</p>
+        <p>Por ejemplo, se puede utilizar para:</p>
+        <ul>
+          <li>Dar estilo a la primera letra o línea de un elemento.</li>
+          <li>Insertar contenido antes o después del contenido de un elemento.</li>
+        </ul>
+      </div>
+    
+      <div class="example-container">
+        <h2>Sintaxis</h2>
+        <p>La sintaxis de los pseudo-elementos:</p>
+        <pre><code>selector::pseudo-elemento {
+      propiedad: valor;
+    }</code></pre>
+      </div>
+    
+      <div class="example-container">
+        <h2>Pseudo-elemento ::first-line</h2>
+        <p>El pseudo-elemento ::first-line se utiliza para agregar un estilo especial a la primera línea de un texto.</p>
+        <p>Ejemplo:</p>
+        <pre><code>p::first-line {
+      color: #ff0000;
+      font-variant: small-caps;
+    }</code></pre>
+      </div>
+    
+      <div class="example-container">
+        <h2>Pseudo-elemento ::first-letter</h2>
+        <p>El pseudo-elemento ::first-letter se utiliza para agregar un estilo especial a la primera letra de un texto.</p>
+        <p>Ejemplo:</p>
+        <pre><code>p::first-letter {
+      color: #ff0000;
+      font-size: xx-large;
+    }</code></pre>
+      </div>
+    
+      <div class="example-container">
+        <h2>Pseudo-elemento ::before</h2>
+        <p>El pseudo-elemento ::before se utiliza para insertar contenido antes del contenido de un elemento.</p>
+        <p>Ejemplo:</p>
+        <pre><code>h1::before {
+      content: url(smiley.gif);
+    }</code></pre>
+      </div>
+    
+      <div class="example-container">
+        <h2>Pseudo-elemento ::after</h2>
+        <p>El pseudo-elemento ::after se utiliza para insertar contenido después del contenido de un elemento.</p>
+        <p>Ejemplo:</p>
+        <pre><code>h1::after {
+      content: url(smiley.gif);
+    }</code></pre>
+      </div>
+    
+      <div class="example-container">
+        <h2>Pseudo-elemento ::marker</h2>
+        <p>El pseudo-elemento ::marker selecciona los marcadores de los elementos de lista.</p>
+        <p>Ejemplo:</p>
+        <pre><code>::marker {
+      color: red;
+      font-size: 23px;
+    }</code></pre>
+      </div>
+    
+      <div class="example-container">
+        <h2>Pseudo-elemento ::selection</h2>
+        <p>El pseudo-elemento ::selection coincide con la porción de un elemento que está seleccionada por un usuario.</p>
+        <p>Ejemplo:</p>
+        <pre><code>::selection {
+      color: red;
+      background: yellow;
+    }</code></pre>
+      </div>
+</body>
+</html>

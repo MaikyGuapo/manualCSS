@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: #4CAF50;
+}
+
+h1 {
+    text-align: center;
+}
+
+p, ul, table {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.example-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.example-text {
+    overflow: hidden;
+    position: relative;
+}
+
+.example-text img {
+    max-width: 100px;
+    height: auto;
+    margin: 10px;
+}
+
+.float-right {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+.float-left {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.float-none {
+    float: none;
+    margin: 0;
+}
+
+.float-box {
+    width: 45%;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightblue;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.clear-box {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: lightgreen;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    clear: both;
+}
+
+.clear-both {
+    clear: both;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.div1, .div2, .div3 {
+    width: 30%;
+    padding: 15px;
+    margin: 5px;
+    color: white;
+    text-align: center;
+}
+
+.div1 {
+    background: red;
+}
+
+.div2 {
+    background: yellow;
+    color: black;
+}
+
+.div3 {
+    background: green;
+}

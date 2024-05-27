@@ -1,0 +1,76 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1; /* Color de fondo */
+    color: #333; /* Color del texto */
+}
+
+.w3-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.w3-panel {
+    padding: 20px;
+    border-left: 6px solid #4CAF50; /* Color del borde izquierdo */
+    background-color: #e7f3e7; /* Color de fondo */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.w3-ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.w3-ul li {
+    padding: 10px 0;
+}
+
+.w3-table-all {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd; /* Color del borde de la tabla */
+}
+
+.w3-table-all th, .w3-table-all td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Color del borde inferior de las celdas */
+    text-align: left;
+}
+
+.w3-table-all th {
+    background-color: #f2f2f2; /* Color de fondo de las celdas de encabezado */
+}
+
+.w3-table-all tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color de fondo de filas pares */
+}
+
+/* Estilos adicionales */
+.w3-small {
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+    color: #666; /* Color de texto gris */
+}
+
+.w3-box {
+    border: 1px solid #ddd; /* Borde gris */
+    background-color: #fff; /* Fondo blanco */
+    padding: 10px; /* Espacio interno */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.w3-box p {
+    margin-bottom: 10px; /* Espacio inferior entre párrafos */
+}
+
+.w3-box p:last-child {
+    margin-bottom: 0; /* Elimina el espacio inferior para el último párrafo */
+}
+
+.w3-box .w3-note {
+    background-color: #f9f9f9; /* Color de fondo para notas */
+    padding: 5px 10px; /* Espacio interno para notas */
+    border-left: 4px solid #2196F3; /* Borde izquierdo azul */
+    margin-bottom: 10px; /* Espacio inferior para notas */
+}

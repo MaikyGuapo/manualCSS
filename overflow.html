@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedad CSS overflow</title>
+    <link rel="stylesheet" href="styleoverflow.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Propiedad CSS - overflow</h1>
+        <p>La propiedad <code>overflow</code> controla lo que sucede con el contenido que es demasiado grande para caber en un área.</p>
+        <div class="example-container">
+            <h3>Ejemplo</h3>
+            <div class="example-box overflow-auto">
+                Este texto es realmente largo y la altura de su contenedor es de solo 100 píxeles. Por lo tanto, se agrega una barra de desplazamiento para ayudar al lector a desplazarse por el contenido. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
+            </div>
+        </div>
+
+        <h2>CSS Overflow</h2>
+        <p>La propiedad <code>overflow</code> especifica si recortar el contenido o agregar barras de desplazamiento cuando el contenido de un elemento es demasiado grande para caber en el área especificada.</p>
+        <p>La propiedad <code>overflow</code> tiene los siguientes valores:</p>
+        <ul>
+            <li><code>visible</code> - Predeterminado. El desbordamiento no se recorta. El contenido se representa fuera de la caja del elemento</li>
+            <li><code>hidden</code> - El desbordamiento se recorta y el resto del contenido será invisible</li>
+            <li><code>scroll</code> - El desbordamiento se recorta y se agrega una barra de desplazamiento para ver el resto del contenido</li>
+            <li><code>auto</code> - Similar a <code>scroll</code>, pero solo agrega barras de desplazamiento cuando es necesario</li>
+        </ul>
+        <p><strong>Nota:</strong> La propiedad <code>overflow</code> solo funciona para elementos de bloque con una altura especificada.</p>
+        <p><strong>Nota:</strong> En OS X Lion (en Mac), las barras de desplazamiento están ocultas por defecto y solo se muestran cuando se usan (aunque se haya establecido <code>overflow:scroll</code>).</p>
+
+        <h3>overflow: visible</h3>
+        <p>Por defecto, el desbordamiento es visible, lo que significa que no se recorta y se representa fuera de la caja del elemento:</p>
+        <div class="example-container">
+            <h3>Ejemplo</h3>
+            <div class="example-box overflow-visible">
+                Puedes usar la propiedad overflow cuando quieras tener un mejor control del diseño. La propiedad overflow especifica lo que sucede si el contenido desborda la caja de un elemento. EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO 
+            </div>
+        </div>
+
+        <h3>overflow: hidden</h3>
+        <p>Con el valor <code>hidden</code>, el desbordamiento se recorta y el resto del contenido está oculto:</p>
+        <div class="example-container">
+            <h3>Ejemplo</h3>
+            <div class="example-box overflow-hidden">
+                Puedes usar la propiedad overflow cuando quieras tener un mejor control del diseño. La propiedad overflow especifica lo que sucede si el contenido desborda la caja de un elemento.EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO 
+            </div>
+        </div>
+
+        <h3>overflow: scroll</h3>
+        <p>Establecer el valor en <code>scroll</code>, el desbordamiento se recorta y se agrega una barra de desplazamiento para desplazarse dentro de la caja. Ten en cuenta que esto agregará una barra de desplazamiento tanto horizontal como vertical (incluso si no la necesitas):</p>
+        <div class="example-container">
+            <h3>Ejemplo</h3>
+            <div class="example-box overflow-scroll">
+                Puedes usar la propiedad overflow cuando quieras tener un mejor control del diseño. La propiedad overflow especifica lo que sucede si el contenido desborda la caja de un elemento.EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO 
+            </div>
+        </div>
+
+        <h3>overflow: auto</h3>
+        <p>El valor <code>auto</code> es similar a <code>scroll</code>, pero solo agrega barras de desplazamiento cuando es necesario:</p>
+        <div class="example-container">
+            <h3>Ejemplo</h3>
+            <div class="example-box overflow-auto">
+                Puedes usar la propiedad overflow cuando quieras tener un mejor control del diseño. La propiedad overflow especifica lo que sucede si el contenido desborda la caja de un elemento.EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO 
+            </div>
+        </div>
+
+        <h3>overflow-x y overflow-y</h3>
+        <p>Las propiedades <code>overflow-x</code> y <code>overflow-y</code> especifican si cambiar el desbordamiento del contenido solo horizontalmente o verticalmente (o ambos):</p>
+        <ul>
+            <li><code>overflow-x</code> especifica qué hacer con los bordes izquierdo/derecho del contenido si desborda el área de contenido del elemento.</li>
+            <li><code>overflow-y</code> especifica qué hacer con los bordes superior/inferior del contenido si desborda el área de contenido del elemento.</li>
+        </ul>
+        <div class="example-container">
+            <h3>Ejemplo</h3>
+            <div class="example-box overflow-x-hidden overflow-y-scroll">
+                Puedes usar la propiedad overflow cuando quieras tener un mejor control del diseño. La propiedad overflow especifica lo que sucede si el contenido desborda la caja de un elemento.EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO EJEMPLO 
+            </div>
+        </div>
+
+        <h2>Propiedades de Overflow en CSS</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>overflow</code></td>
+                    <td>Especifica lo que sucede si el contenido desborda la caja de un elemento</td>
+                </tr>
+                <tr>
+                    <td><code>overflow-wrap</code></td>
+                    <td>Especifica si el navegador puede romper líneas con palabras largas, si desbordan su contenedor</td>
+                </tr>
+                <tr>
+                    <td><code>overflow-x</code></td>
+                    <td>Especifica qué hacer con los bordes izquierdo/derecho del contenido si desborda el área de contenido del elemento</td>
+                </tr>
+                <tr>
+                    <td><code>overflow-y</code></td>
+                    <td>Especifica qué hacer con los bordes superior/inferior del contenido si desborda el área de contenido del elemento</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1; /* Color de fondo */
+    color: #333; /* Color del texto */
+}
+
+.w3-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.w3-panel {
+    padding: 20px;
+    border-left: 6px solid #4CAF50; /* Color del borde izquierdo */
+    background-color: #e7f3e7; /* Color de fondo */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.w3-box {
+    border: 1px solid #ddd; /* Borde gris */
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px; /* Espacio interno */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.w3-ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.w3-ul li {
+    padding: 5px 0;
+}
+
+/* Estilos adicionales */
+.w3-small {
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+    color: #666; /* Color de texto gris */
+}

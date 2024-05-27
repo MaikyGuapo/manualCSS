@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float y Clear</title>
+    <link rel="stylesheet" href="stylefloatandclear.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Layout - float and clear</h1>
+        <p>La propiedad CSS <code>float</code> especifica cómo debe flotar un elemento.</p>
+        <p>La propiedad CSS <code>clear</code> especifica qué elementos pueden flotar al lado del elemento despejado y en qué lado.</p>
+        
+        <h2>Propiedad Float</h2>
+        <p>La propiedad <code>float</code> se usa para posicionar y formatear contenido, por ejemplo, dejar que una imagen flote a la izquierda del texto en un contenedor.</p>
+        <ul>
+            <li><code>left</code> - El elemento flota a la izquierda de su contenedor.</li>
+            <li><code>right</code> - El elemento flota a la derecha de su contenedor.</li>
+            <li><code>none</code> - El elemento no flota (se mostrará justo donde aparece en el texto). Este es el valor predeterminado.</li>
+            <li><code>inherit</code> - El elemento hereda el valor float de su elemento padre.</li>
+        </ul>
+
+        <h3>Ejemplo - float: right;</h3>
+        <div class="example-container">
+            <p class="example-text">
+                <img src="imagen1.jpg" alt="Pineapple" class="float-right"> 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
+            </p>
+        </div>
+
+        <h3>Ejemplo - float: left;</h3>
+        <div class="example-container">
+            <p class="example-text">
+                <img src="imagen1.jpg" alt="Pineapple" class="float-left"> 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
+            </p>
+        </div>
+
+        <h3>Ejemplo - No float</h3>
+        <div class="example-container">
+            <p class="example-text">
+                <img src="imagen1.jpg" alt="Pineapple" class="float-none"> 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
+            </p>
+        </div>
+
+        <h3>Ejemplo - Float Next To Each Other</h3>
+        <div class="example-container">
+            <div class="div1">Div 1</div>
+            <div class="div2">Div 2</div>
+            <div class="div3">Div 3</div>
+        </div>
+
+        <h2>Propiedad Clear</h2>
+        <p>La propiedad <code>clear</code> especifica en qué lados de un elemento flotante no se permite que otros elementos floten.</p>
+        <ul>
+            <li><code>clear: left;</code> - No se permiten elementos flotantes a la izquierda.</li>
+            <li><code>clear: right;</code> - No se permiten elementos flotantes a la derecha.</li>
+            <li><code>clear: both;</code> - No se permiten elementos flotantes ni a la izquierda ni a la derecha.</li>
+            <li><code>clear: none;</code> - Se permiten elementos flotantes a ambos lados. Es el valor predeterminado.</li>
+        </ul>
+
+        <h3>Ejemplo - clear: both;</h3>
+        <div class="example-container">
+            <div class="float-box float-left">Flota a la izquierda</div>
+            <div class="float-box float-right">Flota a la derecha</div>
+            <div class="clear-both"></div>
+            <p class="example-text">Este texto se coloca después del elemento con <code>clear: both;</code>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Proin ac consequat arcu. Suspendisse potenti.</p>
+        </div>
+
+        <h2>Propiedades de Float y Clear en CSS</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>float</code></td>
+                    <td>Especifica si un elemento debe flotar a la izquierda, derecha, o no flotar.</td>
+                </tr>
+                <tr>
+                    <td><code>clear</code></td>
+                    <td>Especifica en qué lados de un elemento flotante no se permite que otros elementos floten.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

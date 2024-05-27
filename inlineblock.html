@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout - display: inline-block</title>
+    <link rel="stylesheet" href="styleinlineblock.css">
+</head>
+<body>
+
+    <div class="w3-container">
+        <h2>CSS Layout - display: inline-block</h2>
+
+        <div class="example-box">
+            <h3>El valor display: inline-block</h3>
+            <p>Comparado con display: inline, la diferencia principal es que display: inline-block permite establecer un ancho y un alto en el elemento.</p>
+            <p>También, con display: inline-block, los márgenes/paddings superior e inferior se respetan, pero con display: inline no se respetan.</p>
+            <p>Comparado con display: block, la diferencia principal es que display: inline-block no añade un salto de línea después del elemento, por lo que el elemento puede situarse al lado de otros elementos.</p>
+            <p>El siguiente ejemplo muestra el comportamiento diferente de display: inline, display: inline-block y display: block:</p>
+
+            <div class="inline-block-container">
+                <span class="a inline-block-example">inline</span>
+                <span class="b inline-block-example">inline-block</span>
+                <span class="c inline-block-example">block</span>
+            </div>
+
+            <code>
+                span.a { display: inline; width: 100px; height: 100px; padding: 5px; border: 1px solid blue; background-color: yellow; }<br>
+                span.b { display: inline-block; width: 100px; height: 100px; padding: 5px; border: 1px solid blue; background-color: yellow; }<br>
+                span.c { display: block; width: 100px; height: 100px; padding: 5px; border: 1px solid blue; background-color: yellow; }
+            </code>
+        </div>
+
+        <div class="example-box">
+            <h3>Usando inline-block para Crear Enlaces de Navegación</h3>
+            <p>Un uso común de display: inline-block es mostrar elementos de lista horizontalmente en lugar de verticalmente. El siguiente ejemplo crea enlaces de navegación horizontales:</p>
+
+            <ul class="nav">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+
+            <code>
+                .nav { background-color: yellow; list-style-type: none; text-align: center; padding: 0; margin: 0; }<br>
+                .nav li { display: inline-block; font-size: 20px; padding: 20px; }
+            </code>
+        </div>
+
+    </div>
+
+</body>
+</html>

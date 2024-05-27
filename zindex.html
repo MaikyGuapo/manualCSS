@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedad CSS z-index</title>
+    <link rel="stylesheet" href="stylezindex.css">
+</head>
+<body>
+    <div class="w3-container">
+        <h1>Layout CSS - La propiedad z-index</h1>
+        <div class="w3-panel w3-pale-blue">
+            <p>La propiedad z-index especifica el orden de apilamiento de un elemento.</p>
+        </div>
+        <div class="w3-box">
+            <h2>La propiedad z-index</h2>
+            <p>Cuando los elementos están posicionados, pueden superponerse a otros elementos.</p>
+            <p>La propiedad z-index especifica el orden de apilamiento de un elemento (qué elemento debe colocarse delante o detrás de los demás).</p>
+            <p>Un elemento puede tener un orden de apilamiento positivo o negativo:</p>
+            <div class="example-container">
+                <h3>Ejemplo</h3>
+                <p>Porque la imagen tiene un z-index de -1, se colocará detrás del texto.</p>
+                <img src="imagen1.jpg" alt="Ejemplo" class="example-image">
+            </div>
+            <p>Nota: z-index solo funciona en elementos posicionados (position: absolute, position: relative, position: fixed o position: sticky) e items flex (elementos que son hijos directos de elementos display: flex).</p>
+        </div>
+        <div class="w3-box">
+            <h3>Otro Ejemplo de z-index</h3>
+            <p>Aquí vemos que un elemento con un orden de apilamiento mayor siempre está encima de un elemento con un orden de apilamiento menor:</p>
+            <div class="example-code">
+                <pre>
+                    <code>
+.container {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  z-index: 1;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  z-index: 3;
+  background: lightgray;
+  height: 60px;
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  z-index: 2;
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="w3-box">
+            <h3>Sin z-index</h3>
+            <p>Si dos elementos posicionados se superponen entre sí sin un z-index especificado, el elemento definido por último en el código HTML se mostrará encima:</p>
+            <div class="example-code">
+                <pre>
+                    <code>
+.container {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  background: lightgray;
+  height: 60px;
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

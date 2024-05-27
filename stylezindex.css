@@ -1,0 +1,54 @@
+/* Reset de estilos */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1; /* Color de fondo */
+    color: #333; /* Color del texto */
+}
+
+.w3-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative; /* Agregar posición relativa para que los elementos hijos posicionados sean relativos a este */
+}
+
+.w3-panel {
+    padding: 20px;
+    border-left: 6px solid #4CAF50; /* Color del borde izquierdo */
+    background-color: #e7f3e7; /* Color de fondo */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.w3-box {
+    border: 1px solid #ddd; /* Borde gris */
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px; /* Espacio interno */
+    margin-bottom: 20px; /* Espacio inferior */
+    position: relative; /* Agregar posición relativa para que los elementos hijos posicionados sean relativos a este */
+}
+
+.example-container {
+    position: relative; /* Establecer posición relativa para que los elementos internos se posicionen relativamente a este */
+    margin-top: 20px;
+    overflow: hidden; /* Ocultar contenido que sobresalga del contenedor */
+}
+
+.example-image {
+    position: absolute;
+    top: 50%; /* Centrar verticalmente la imagen */
+    left: 50%; /* Centrar horizontalmente la imagen */
+    transform: translate(-50%, -50%); /* Centrar la imagen exactamente en el medio */
+    width: 100%; /* Ajustar el ancho de la imagen para que ocupe todo el contenedor */
+    z-index: -1; /* Colocar la imagen detrás del texto pero delante del contenedor */
+}
+
+/* Estilos adicionales */
+.w3-small {
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+    color: #666; /* Color de texto gris */
+}

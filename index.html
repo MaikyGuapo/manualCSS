@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de CSS</title>
+    <link rel="stylesheet" href="styleindex.css">
+</head>
+<body>
+    <header>
+        <h1>Manual de CSS</h1>
+        <div class="menu-btn">&#9776; Menú</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="display.html">Display</a></li>
+                <li><a href="position.html">Position</a></li>
+                <li><a href="zindex.html">Z-index</a></li>
+                <li><a href="overflow.html">Overflow</a></li>
+                <li><a href="floatandclear.html">Float and clear</a></li>
+                <li><a href="inlineblock.html">Display: inline-block</a></li>
+                <li><a href="others.html">Others</a></li>
+            </ul>
+        </nav>
+    </header>
+    <footer>
+        <p>© 2024 Manual de CSS</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.menu-btn');
+            const nav = document.querySelector('nav ul');
+
+            menuBtn.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedad CSS Position</title>
+    <link rel="stylesheet" href="styleposition.css">
+</head>
+<body>
+    <div class="w3-container">
+        <h1>Layout CSS - La propiedad position</h1>
+        <div class="w3-panel w3-pale-blue">
+            <p>La propiedad position especifica el tipo de método de posicionamiento utilizado para un elemento (estático, relativo, fijo, absoluto o pegajoso).</p>
+        </div>
+        <div class="w3-box">
+            <h2>La propiedad position</h2>
+            <p>La propiedad position especifica el tipo de método de posicionamiento utilizado para un elemento.</p>
+            <p>Existen cinco valores diferentes de posición:</p>
+            <ul class="w3-ul">
+                <li>static</li>
+                <li>relative</li>
+                <li>fixed</li>
+                <li>absolute</li>
+                <li>sticky</li>
+            </ul>
+            <p>Los elementos se posicionan utilizando las propiedades top, bottom, left y right. Sin embargo, estas propiedades no funcionarán a menos que primero se establezca la propiedad position. También funcionan de manera diferente dependiendo del valor de posición.</p>
+        </div>
+        <div class="w3-box">
+            <h3>position: static;</h3>
+            <p>Los elementos HTML están posicionados estáticamente de forma predeterminada.</p>
+            <p>Los elementos posicionados estáticamente no se ven afectados por las propiedades top, bottom, left y right.</p>
+            <p>Un elemento con position: static; no se posiciona de ninguna manera especial; siempre se posiciona de acuerdo con el flujo normal de la página:</p>
+        </div>
+        <div class="w3-box">
+            <h3>position: relative;</h3>
+            <p>Un elemento con position: relative; se posiciona relativo a su posición normal.</p>
+            <p>Establecer las propiedades top, right, bottom y left de un elemento posicionado relativamente hará que se ajuste lejos de su posición normal. Otro contenido no se ajustará para adaptarse a ningún espacio dejado por el elemento.</p>
+        </div>
+        <div class="w3-box">
+            <h3>position: fixed;</h3>
+            <p>Un elemento con position: fixed; se posiciona relativo a la ventana gráfica, lo que significa que siempre permanece en el mismo lugar incluso si se desplaza la página. Las propiedades top, right, bottom y left se utilizan para posicionar el elemento.</p>
+            <p>Un elemento fijo no deja un espacio en la página donde normalmente habría estado ubicado.</p>
+        </div>
+        <div class="w3-box">
+            <h3>position: absolute;</h3>
+            <p>Un elemento con position: absolute; se posiciona relativo al ancestro posicionado más cercano (en lugar de estar posicionado relativo a la ventana gráfica, como fijo).</p>
+            <p>Si un elemento posicionado absolutamente no tiene ancestros posicionados, utiliza el cuerpo del documento y se mueve junto con el desplazamiento de la página.</p>
+            <p>Los elementos posicionados absolutamente se eliminan del flujo normal y pueden superponerse a otros elementos.</p>
+        </div>
+        <div class="w3-box">
+            <h3>position: sticky;</h3>
+            <p>Un elemento con position: sticky; se posiciona en función de la posición de desplazamiento del usuario.</p>
+            <p>Un elemento pegajoso alterna entre relativo y fijo, dependiendo de la posición de desplazamiento. Se posiciona relativo hasta que se alcanza una posición de desplazamiento dada en la ventana gráfica; entonces se "pega" en su lugar (como position: fixed).</p>
+            <p>Nota: Internet Explorer no admite el posicionamiento pegajoso. Safari requiere un prefijo -webkit- (ver ejemplo a continuación). También debes especificar al menos uno de los valores top, right, bottom o left para que funcione el posicionamiento pegajoso.</p>
+        </div>
+        <div class="w3-box">
+            <h3>Más Ejemplos</h3>
+            <p>Establecer la forma de un elemento</p>
+            <p>Este ejemplo demuestra cómo establecer la forma de un elemento. El elemento se recorta en esta forma y se muestra.</p>
+        </div>
+        <div class="w3-box">
+            <h3>Todas las Propiedades de Posicionamiento CSS</h3>
+            <ul class="w3-ul">
+                <li>bottom: Establece el borde inferior para una caja posicionada</li>
+                <li>clip: Recorta un elemento posicionado absolutamente</li>
+                <li>left: Establece el borde izquierdo para una caja posicionada</li>
+                <li>position: Especifica el tipo de posicionamiento para un elemento</li>
+                <li>right: Establece el borde derecho para una caja posicionada</li>
+                <li>top: Establece el borde superior para una caja posicionada</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

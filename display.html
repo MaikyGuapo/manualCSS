@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedad CSS Display</title>
+    <link rel="stylesheet" href="styledisplay.css">
+</head>
+<body>
+    <div class="w3-container">
+        <h1>Layout CSS - La propiedad display</h1>
+        <div class="w3-panel w3-pale-blue">
+            <p>La propiedad display es la propiedad CSS más importante para controlar el diseño.</p>
+        </div>
+        <div class="w3-box">
+            <h2>La propiedad display</h2>
+            <p>La propiedad display se utiliza para especificar cómo se muestra un elemento en una página web.</p>
+            <p>Cada elemento HTML tiene un valor de visualización predeterminado, dependiendo del tipo de elemento que sea. El valor de visualización predeterminado para la mayoría de los elementos es bloque o en línea.</p>
+            <p>La propiedad display se utiliza para cambiar el comportamiento de visualización predeterminado de los elementos HTML.</p>
+        </div>
+        <div class="w3-box">
+            <h3>Elementos de nivel de bloque</h3>
+            <p>Un elemento de nivel de bloque SIEMPRE comienza en una nueva línea y ocupa todo el ancho disponible (se extiende hacia la izquierda y hacia la derecha tanto como puede).</p>
+            <p>El elemento &lt;div&gt; es un elemento de nivel de bloque.</p>
+            <p>Ejemplos de elementos de nivel de bloque:</p>
+            <ul class="w3-ul">
+                <li>&lt;div&gt;</li>
+                <li>&lt;h1&gt; - &lt;h6&gt;</li>
+                <li>&lt;p&gt;</li>
+                <li>&lt;form&gt;</li>
+                <li>&lt;header&gt;</li>
+                <li>&lt;footer&gt;</li>
+                <li>&lt;section&gt;</li>
+            </ul>
+        </div>
+        <div class="w3-box">
+            <h3>Elementos en línea</h3>
+            <p>Un elemento en línea NO comienza en una nueva línea y solo ocupa el ancho necesario.</p>
+            <p>Este es un elemento en línea &lt;span&gt; dentro de un párrafo.</p>
+            <p>Ejemplos de elementos en línea:</p>
+            <ul class="w3-ul">
+                <li>&lt;span&gt;</li>
+                <li>&lt;a&gt;</li>
+                <li>&lt;img&gt;</li>
+            </ul>
+        </div>
+        <div class="w3-box">
+            <h3>Valores de la propiedad display</h3>
+            <table class="w3-table-all">
+                <tr>
+                    <th>Valor</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td>inline</td>
+                    <td>Muestra un elemento como un elemento en línea</td>
+                </tr>
+                <tr>
+                    <td>block</td>
+                    <td>Muestra un elemento como un elemento de bloque</td>
+                </tr>
+            </table>
+        </div>
+        <div class="w3-box">
+            <h3>Display: none;</h3>
+            <p>display: none; se utiliza comúnmente con JavaScript para ocultar y mostrar elementos sin eliminarlos y recrearlos. Echa un vistazo a nuestro último ejemplo en esta página si quieres saber cómo se puede lograr esto.</p>
+            <p>El elemento &lt;script&gt; usa display: none; como valor predeterminado.</p>
+        </div>
+        <div class="w3-box">
+            <h3>Sobreescribir el valor de visualización predeterminado</h3>
+            <p>Como se mencionó, cada elemento tiene un valor de visualización predeterminado. Sin embargo, puedes sobrescribir esto.</p>
+            <p>Cambiar un elemento en línea a un elemento de bloque, o viceversa, puede ser útil para hacer que la página tenga un aspecto específico y aún así seguir los estándares web.</p>
+            <p>Un ejemplo común es hacer elementos en línea &lt;li&gt; para menús horizontales.</p>
+            <pre><code>li {
+  display: inline;
+}</code></pre>
+            <p>Nota: Establecer la propiedad display de un elemento solo cambia cómo se muestra el elemento, NO qué tipo de elemento es. Entonces, un elemento en línea con display: block; no puede tener otros elementos de bloque dentro de él.</p>
+            <p>El siguiente ejemplo muestra los elementos &lt;span&gt; como elementos de bloque:</p>
+            <pre><code>span {
+  display: block;
+}</code></pre>
+            <p>El siguiente ejemplo muestra los elementos &lt;a&gt; como elementos de bloque:</p>
+            <pre><code>a {
+  display: block;
+}</code></pre>
+        </div>
+        <div class="w3-box">
+            <h3>Ocultar un elemento</h3>
+            <p>Se puede ocultar un elemento estableciendo la propiedad display en none. El elemento será invisible y la página se mostrará como si el elemento no estuviera allí:</p>
+            <pre><code>h1.oculto {
+  display: none;
+}</code></pre>
+            <p>visibility:hidden; también oculta un elemento. Sin embargo, el elemento seguirá ocupando el mismo espacio que antes. El elemento estará oculto, pero aún afectará al diseño:</p>
+            <pre><code>h1.oculto {
+  visibility: hidden;
+}</code></pre>
+        </div>
+        <div class="w3-box w3-small w3-note">
+            <p><strong>Nota:</strong> display: none; oculta el elemento completamente y elimina su espacio en el diseño, mientras que visibility: hidden; oculta el elemento pero aún reserva su espacio.</p>
+        </div>
+    </div>
+</body>
+</html>
